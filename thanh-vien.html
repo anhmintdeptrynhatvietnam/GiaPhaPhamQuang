@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ - Gia phả Họ Phạm Quang</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="css/styles_home_page.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo-1.png" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+                Gia phả Họ Phạm Quang
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link " href="index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cay-gia-pha-2.html">Cây gia phả</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Thành viên</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sự kiện</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Tài liệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
+                </ul>
+                <span class="navbar-text me-3" id="current-time"></span>
+                <button class="btn btn-outline-primary">Đăng nhập</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="display-4">Thành viên Họ Phạm Quang</h1>
+            <p class="lead">Nơi lưu giữ và kết nối lịch sử gia đình</p>
+        </div>
+        <!-- <div class="hero-content">
+            <h2 class="section-title">Giới thiệu</h2>
+            <p>Gia phả Họ Phạm Quang là nơi lưu giữ và kết nối lịch sử, truyền thống của dòng họ Phạm Quang qua nhiều thế hệ. Chúng tôi tự hào về nguồn gốc và những đóng góp của các thành viên trong gia đình cho cộng đồng và đất nước.</p>
+            <a href="#" class="btn btn-primary">Tìm hiểu thêm</a>
+        </div> -->
+    </section>
+
+    <!-- Nội dung chính -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Tìm kiếm thành viên</h5>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="searchInput" placeholder="Nhập tên thành viên">
+                            <button class="btn btn-primary" type="button" id="searchButton">Tìm kiếm</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Lọc thành viên</h5>
+                        <div class="mb-3">
+                            <label for="generationFilter" class="form-label">Thế hệ</label>
+                            <select class="form-select" id="generationFilter">
+                                <option value="">Tất cả</option>
+                                <option value="1">Thế hệ 1</option>
+                                <option value="2">Thế hệ 2</option>
+                                <option value="3">Thế hệ 3</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="genderFilter" class="form-label">Giới tính</label>
+                            <select class="form-select" id="genderFilter">
+                                <option value="">Tất cả</option>
+                                <option value="male">Nam</option>
+                                <option value="female">Nữ</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" id="applyFilters">Áp dụng bộ lọc</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Danh sách thành viên -->
+            <div class="col-md-8">
+                <h2 class="section-title">Danh sách thành viên</h2>
+                <div class="row" id="memberList">
+                    <!-- Các thẻ thành viên sẽ được thêm vào đây bằng JavaScript -->
+                </div>
+                <nav aria-label="Page navigation" class="mt-4">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Trước</a>
+                        </li>
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">Sau</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Về chúng tôi</h5>
+                    <p>Gia phả Họ Phạm Quang là nơi lưu giữ và kết nối lịch sử, truyền thống của dòng họ Phạm Quang qua nhiều thế hệ.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liên kết nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Trang chủ</a></li>
+                        <li><a href="#" class="text-white">Cây gia phả</a></li>
+                        <li><a href="#" class="text-white">Thành viên</a></li>
+                        <li><a href="#" class="text-white">Sự kiện</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Theo dõi chúng tôi</h5>
+                    <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p>&copy;
+                    <p>&copy; 2023 Gia phả Họ Phạm Quang. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+        <div class="backtotop">
+            <!-- Back to top button -->
+            <button type="button" class="btn btn-primary btn-floating btn-lg" id="btn-back-to-top">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Dữ liệu mẫu cho thành viên
+        const members = [
+            { id: 1, name: "Phạm Thị Phương", generation: 1, gender: "female", birthYear: 1953, occupation: "Về hưu" },
+            { id: 2, name: "Phạm Thị Dung", generation: 1, gender: "female", birthYear: 1956, occupation: "Về hưu" },
+            { id: 3, name: "Phạm Quang Hòa", generation: 1, gender: "male", birthYear: 1959, occupation: "Về hưu" },
+            { id: 4, name: "Phạm Thị Vân", generation: 1, gender: "female", birthYear: 1962, occupation: "Về hưu" },
+            { id: 5, name: "Phạm Quang Thắng", generation: 1, gender: "male", birthYear: 1965, occupation: "Công chức" },
+            { id: 6, name: "Phạm Thị Nga", generation: 1, gender: "female", birthYear: 1968, occupation: "Kế toán" },
+            { id: 7, name: "Phạm Quang Đức", generation: 1, gender: "male", birthYear: 1970, occupation: "Kiến trúc sư" },
+            { id: 8, name: "Phạm Quang Phúc", generation: 1, gender: "male", birthYear: 1974, occupation: "Công chức" },
+            // Thêm nhiều thành viên khác ở đây
+        ];
+
+        // Hàm tạo thẻ thành viên
+        function createMemberCard(member) {
+            return `
+                <div class="col-md-4 mb-4">
+                    <div class="card member-card">
+                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="${member.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${member.name}</h5>
+                            <p class="card-text">Sinh năm: ${member.birthYear}</p>
+                            <p class="card-text">Nghề nghiệp: ${member.occupation}</p>
+                            <a href="profile.html?id=${member.id}" class="btn btn-primary">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Hiển thị danh sách thành viên
+        function displayMembers(membersToDisplay) {
+            const memberList = document.getElementById('memberList');
+            memberList.innerHTML = membersToDisplay.map(createMemberCard).join('');
+        }
+
+        // Hiển thị tất cả thành viên ban đầu
+        displayMembers(members);
+
+        // Xử lý tìm kiếm
+        document.getElementById('searchButton').addEventListener('click', function() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const filteredMembers = members.filter(member => 
+                member.name.toLowerCase().includes(searchTerm)
+            );
+            displayMembers(filteredMembers);
+        });
+
+        // Xử lý lọc
+        document.getElementById('applyFilters').addEventListener('click', function() {
+            const generationFilter = document.getElementById('generationFilter').value;
+            const genderFilter = document.getElementById('genderFilter').value;
+
+            const filteredMembers = members.filter(member => 
+                (generationFilter === '' || member.generation.toString() === generationFilter) &&
+                (genderFilter === '' || member.gender === genderFilter)
+            );
+            displayMembers(filteredMembers);
+        });
+
+        // Nút back to top (giữ nguyên từ trang chủ)
+        // ...
+    </script>
+</body>
+</html>

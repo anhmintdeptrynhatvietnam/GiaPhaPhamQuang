@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ - Gia phả Họ Phạm Quang</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="css/styles_home_page.css" rel="stylesheet">
+</head>
+<style>
+     body {
+            background-color: #f0f8ff;
+        }
+        .family-tree {
+            padding: 30px 0;
+        }
+        .person {
+            background:linear-gradient(45deg, #a1c4fd 0%, #c2e9fb 100%);
+            border-radius: 15px;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .person:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+        }
+        .person img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+        }
+        .children {
+            position: relative;
+            margin-left: 40px;
+            padding-left: 20px;
+        }
+        .children::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background: #007bff;
+        }
+        .icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+</style>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo-1.png" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+                Gia phả Họ Phạm Quang
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link " href="index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Cây gia phả</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Thành viên</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sự kiện</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Tài liệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
+                </ul>
+                <span class="navbar-text me-3" id="current-time"></span>
+                <button class="btn btn-outline-primary">Đăng nhập</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="display-4">Chào mừng đến với Gia phả Họ Phạm Quang</h1>
+            <p class="lead">Nơi lưu giữ và kết nối lịch sử gia đình</p>
+        </div>
+        <!-- <div class="hero-content">
+            <h2 class="section-title">Giới thiệu</h2>
+            <p>Gia phả Họ Phạm Quang là nơi lưu giữ và kết nối lịch sử, truyền thống của dòng họ Phạm Quang qua nhiều thế hệ. Chúng tôi tự hào về nguồn gốc và những đóng góp của các thành viên trong gia đình cho cộng đồng và đất nước.</p>
+            <a href="#" class="btn btn-primary">Tìm hiểu thêm</a>
+        </div> -->
+    </section>
+
+    <div class="container family-tree">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="person">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-user-tie icon"></i>
+                        <img src="https://via.placeholder.com/150" alt="Ông Nội">
+                        <h3 class="ms-3">Ông Nội</h3>
+                        <img class="ms-3" src="https://via.placeholder.com/150" alt="Ông Nội">
+                        <h3 class="ms-3">Bà Nội</h3>
+                    </div>
+                    <div class="children mt-3">
+                        <div class="person">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-user icon"></i>
+                                <img src="https://via.placeholder.com/150" alt="Bố">
+                                <h4 class="ms-3">Bố</h4>
+                            </div>
+                            <div class="children mt-3">
+                                <div class="person">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-user-graduate icon"></i>
+                                        <img src="https://via.placeholder.com/150" alt="Tôi">
+                                        <h5 class="ms-3">Tôi</h5>
+                                    </div>
+                                </div>
+                                <div class="person">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-female icon"></i>
+                                        <img src="https://via.placeholder.com/150" alt="Em Gái">
+                                        <h5 class="ms-3">Em Gái</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="person">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-user-friends icon"></i>
+                                <img src="https://via.placeholder.com/150" alt="Chú">
+                                <h4 class="ms-3">Chú</h4>
+                            </div>
+                            <div class="children mt-3">
+                                <div class="person">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-user-ninja icon"></i>
+                                        <img src="https://via.placeholder.com/150" alt="Anh Họ">
+                                        <h5 class="ms-3">Anh Họ</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="person">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-user icon"></i>
+                                <img src="https://via.placeholder.com/150" alt="Bố">
+                                <h4 class="ms-3">Bố</h4>
+                            </div>
+                            <div class="children mt-3">
+                                <div class="person">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-user-graduate icon"></i>
+                                        <img src="https://via.placeholder.com/150" alt="Tôi">
+                                        <h5 class="ms-3">Tôi</h5>
+                                    </div>
+                                </div>
+                                <div class="person">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-female icon"></i>
+                                        <img src="https://via.placeholder.com/150" alt="Em Gái">
+                                        <h5 class="ms-3">Em Gái</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="person">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-user icon"></i>
+                                <img src="https://via.placeholder.com/150" alt="Bố">
+                                <h4 class="ms-3">Bố</h4>
+                            </div>
+                            <div class="children mt-3">
+                                <div class="person">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-user-graduate icon"></i>
+                                        <img src="https://via.placeholder.com/150" alt="Tôi">
+                                        <h5 class="ms-3">Tôi</h5>
+                                    </div>
+                                </div>
+                                <div class="person">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-female icon"></i>
+                                        <img src="https://via.placeholder.com/150" alt="Em Gái">
+                                        <h5 class="ms-3">Em Gái</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="person">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-user icon"></i>
+                                <img src="https://via.placeholder.com/150" alt="Bố">
+                                <h4 class="ms-3">Bố</h4>
+                            </div>
+                            <div class="children mt-3">
+                                <div class="person">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-user-graduate icon"></i>
+                                        <img src="https://via.placeholder.com/150" alt="Tôi">
+                                        <h5 class="ms-3">Tôi</h5>
+                                    </div>
+                                </div>
+                                <div class="person">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-female icon"></i>
+                                        <img src="https://via.placeholder.com/150" alt="Em Gái">
+                                        <h5 class="ms-3">Em Gái</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Liên hệ -->
+    <section class="container my-5">
+        <h2 class="section-title">Liên hệ</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Họ tên">
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" rows="4" placeholder="Nội dung"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Gửi</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h5>Thông tin liên hệ</h5>
+                <p><i class="fas fa-envelope me-2"></i>Email: ducanhPhamQuang@giapha.com</p>
+                <p><i class="fas fa-phone me-2"></i>Điện thoại: 0966 181 628</p>
+                <p><i class="fas fa-map-marker-alt me-2"></i>Địa chỉ: Gemek Tower 2 - An Khánh - Hoài Đức - Hà Nội</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Về chúng tôi</h5>
+                    <p>Gia phả Họ Phạm Quang là nơi lưu giữ và kết nối lịch sử, truyền thống của dòng họ Phạm Quang qua nhiều thế hệ.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liên kết nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Trang chủ</a></li>
+                        <li><a href="#" class="text-white">Cây gia phả</a></li>
+                        <li><a href="#" class="text-white">Thành viên</a></li>
+                        <li><a href="#" class="text-white">Sự kiện</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Theo dõi chúng tôi</h5>
+                    <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p>&copy;
+                    <p>&copy; 2023 Gia phả Họ Phạm Quang. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+        <div class="backtotop">
+            <!-- Back to top button -->
+            <button type="button" class="btn btn-primary btn-floating btn-lg" id="btn-back-to-top">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Hiển thị giờ hiện tại
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('vi-VN');
+            document.getElementById('current-time').textContent = timeString;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // Nút back to top
+        const mybutton = document.getElementById("btn-back-to-top");
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        mybutton.addEventListener("click", backToTop);
+
+        function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>

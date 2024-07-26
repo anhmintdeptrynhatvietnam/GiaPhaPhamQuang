@@ -37,3 +37,45 @@ body {
     background-color: #343a40;
     color: white;
 }
+
+.family-tree ul {
+    padding-left: 20px;
+}
+.family-tree li {
+    list-style-type: none;
+    position: relative;
+    padding: 10px 5px 0 5px;
+}
+.family-tree li::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    width: 20px;
+    height: 15px;
+}
+.family-tree li:last-child::before {
+    border-left: none;
+}
+.family-tree li::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -20px;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    width: 20px;
+    height: 100%;
+}
+.family-tree li:last-child::after {
+    display: none;
+}
+.family-tree .member {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+}

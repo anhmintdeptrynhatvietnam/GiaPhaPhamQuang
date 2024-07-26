@@ -156,14 +156,14 @@
     <script>
         // Dữ liệu mẫu cho thành viên
         const members = [
-            { id: 1, name: "Phạm Thị Phương", generation: 1, gender: "female", birthYear: 1953, occupation: "Về hưu" },
-            { id: 2, name: "Phạm Thị Dung", generation: 1, gender: "female", birthYear: 1956, occupation: "Về hưu" },
-            { id: 3, name: "Phạm Quang Hòa", generation: 1, gender: "male", birthYear: 1959, occupation: "Về hưu" },
-            { id: 4, name: "Phạm Thị Vân", generation: 1, gender: "female", birthYear: 1962, occupation: "Về hưu" },
-            { id: 5, name: "Phạm Quang Thắng", generation: 1, gender: "male", birthYear: 1965, occupation: "Công chức" },
-            { id: 6, name: "Phạm Thị Nga", generation: 1, gender: "female", birthYear: 1968, occupation: "Kế toán" },
-            { id: 7, name: "Phạm Quang Đức", generation: 1, gender: "male", birthYear: 1970, occupation: "Kiến trúc sư" },
-            { id: 8, name: "Phạm Quang Phúc", generation: 1, gender: "male", birthYear: 1974, occupation: "Công chức" },
+            { id: 1, name: "Phạm Thị Phương", generation: 2, gender: "female", birthYear: 1953, occupation: "Về hưu", img : "https://scontent-hkg1-2.xx.fbcdn.net/v/t39.30808-6/448885624_1686091372162998_5368614876119389525_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=aeTQ36-OS5UQ7kNvgGbRhrw&_nc_ht=scontent-hkg1-2.xx&oh=00_AYDjAaU2Gl15_ectpij41_xSt9HGeU1AoEIv1Shdf_bGCA&oe=66A8EE98" },
+            { id: 2, name: "Phạm Thị Dung", generation: 2, gender: "female", birthYear: 1956, occupation: "Về hưu", img : "https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/362254058_3449776538672473_392448663384060034_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=XJIU7ASGwasQ7kNvgGp3jlJ&_nc_ht=scontent-hkg4-1.xx&oh=00_AYBZCcjjLJx2-i4yLJaOtlw9s3aP4x4_reJ10AmVnCypYA&oe=66A8E6CC" },
+            { id: 3, name: "Phạm Quang Hòa", generation: 2, gender: "male", birthYear: 1959, occupation: "Về hưu", img : "https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/269863563_105559725331036_754286012551144498_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=02ONttUlX2cQ7kNvgGHcEF0&_nc_ht=scontent-hkg4-1.xx&gid=AJ-X7lwIZSa7GwedkjQDa3X&oh=00_AYAMph8SmD9xlOo8jWsosLrTs7LOdw2_yva0VjR8ff8e7g&oe=66A8D7ED" },
+            { id: 4, name: "Phạm Thị Vân", generation: 2, gender: "female", birthYear: 1962, occupation: "Về hưu", img : "https://scontent-hkg4-1.xx.fbcdn.net/v/t1.6435-9/102409471_876270816211176_1833693079742784278_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=7b2446&_nc_ohc=pkEAB4GT7QQQ7kNvgFaQpOW&_nc_ht=scontent-hkg4-1.xx&oh=00_AYB2zYZXAaK_7i3FRhNhOgUd-fN8DiuseLV4tZTkmjZUqw&oe=66CA7C23" },
+            { id: 5, name: "Phạm Quang Thắng", generation: 2, gender: "male", birthYear: 1965, occupation: "Công chức", img : "img/unknow.jpg" },
+            { id: 6, name: "Phạm Thị Nga", generation: 2, gender: "female", birthYear: 1968, occupation: "Kế toán", img : "img/unknow.jpg" },
+            { id: 7, name: "Phạm Quang Đức", generation: 2, gender: "male", birthYear: 1970, occupation: "Kiến trúc sư", img : "img/pham-quang-duc.jpg" },
+            { id: 8, name: "Phạm Quang Phúc", generation: 2, gender: "male", birthYear: 1974, occupation: "Công chức", img : "https://scontent-hkg4-1.xx.fbcdn.net/v/t39.30808-6/411721029_2870009249808723_7695375527674902627_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=5ppAMpFCiTYQ7kNvgG-psWc&_nc_ht=scontent-hkg4-1.xx&oh=00_AYCa-1VT0rMtgs9kg9-G7ABHU0MtGTjTsI4yc0RgIx4Q-w&oe=66A8EFD3" },
             // Thêm nhiều thành viên khác ở đây
         ];
 
@@ -172,7 +172,7 @@
             return `
                 <div class="col-md-4 mb-4">
                     <div class="card member-card">
-                        <img src="https://via.placeholder.com/150" class="card-img-top" alt="${member.name}">
+                        <img src="${member.img}" class="card-img-top" alt="${member.name}">
                         <div class="card-body">
                             <h5 class="card-title">${member.name}</h5>
                             <p class="card-text">Sinh năm: ${member.birthYear}</p>
